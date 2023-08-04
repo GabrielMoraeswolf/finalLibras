@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(#4E4FEB,#A0BFE0);
+    height: 100vh;;
+    width: 100%;
+  
+}
+.title{
+    color: #fff;
+    animation: flipTitle 1s;
+}
+@keyframes flipTitle{
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
