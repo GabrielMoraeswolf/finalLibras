@@ -4,13 +4,17 @@
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(#4E4FEB,#A0BFE0);
-    height: 100vh;;
+    height: 100dvh;
     width: 100%;
   
 }
 .title{
     color: #fff;
     animation: flipTitle 1s;
+
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 25px;
 }
 @keyframes flipTitle{
     from{
@@ -20,3 +24,47 @@
         transform: rotateX(0deg);
     }
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 50px); /* 4 colunas com 50px de largura cada */
+    grid-template-rows: repeat(5, 50px); /* 5 linhas com 50px de altura cada */
+    gap: 2px; /* Espaçamento entre os quadrados */
+  }
+  
+  .square {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+  }
+  
+  .row {
+    display: flex;
+  }
+
+  .containerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+  }
+  
+  .card {
+    flex: 1;
+    background-color: #f0f0f0; /* Substitua pela cor desejada */
+    height: 125px;
+    width: 220px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .backButton {
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #4e4feb;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
