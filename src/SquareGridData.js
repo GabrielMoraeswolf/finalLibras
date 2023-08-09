@@ -17,8 +17,8 @@ const dataArray = [
     { id: '16', value: 'Mineração', imageLink: 'imagem16.jpg' },
     { id: '17', value: 'Sismicidade', imageLink: 'imagem17.jpg' },
     { id: '18', value: 'Aquífero', imageLink: 'imagem18.jpg' },
-    { id: '19', value: '19', imageLink: 'imagem19.jpg' },
-    { id: '20', value: '20', imageLink: 'imagem20.jpg' }
+    { id: '19', value: 'Magmastismo', imageLink: 'imagem19.jpg' },
+    { id: '20', value: 'Metamorfismo', imageLink: 'imagem20.jpg' }
   ];
 
   export { dataArray };
