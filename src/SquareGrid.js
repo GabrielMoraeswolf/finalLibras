@@ -15,8 +15,7 @@ function SquareGrid({ onImageClick }) {
 
   const renderRow = (startIndex, endIndex) => {
     const rowItems = listItems.slice(startIndex, endIndex);
-
-    return (
+    return (    
       <div className="row" key={startIndex}>
         {rowItems.map(item => (
           <Card
@@ -38,7 +37,14 @@ function SquareGrid({ onImageClick }) {
     return grid;
   };
 
-  return <div>{renderGrid()}</div>;
+  return (
+    <div>
+      <div>{renderGrid()}</div>
+      <div className="textDescription">
+        <p>Click na palavra para ver o sinal em Libras correspondente.</p>
+      </div>
+    </div>
+  );
 }
 
 export default SquareGrid;

@@ -20,7 +20,7 @@ function App() {
         <h1 className="title">20 Palavras Fundamentais para as Geociências em Libras:</h1>
         <div className="app">
           {selectedImageId === null ? (
-            <SquareGrid onImageClick={handleImageClick} />
+            <SquareGrid onImageClick={handleImageClick} />          
           ) : (
             <ImagePage
               selectedImageId={selectedImageId}
