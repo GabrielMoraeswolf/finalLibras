@@ -10,15 +10,15 @@ function ImagePage({ selectedImageId, onBackButtonClick }) {
   }
 
   return (
-    <div>
-      <button className="backButton" onClick={onBackButtonClick}>
-        Voltar
-      </button>
+    <div className="pageDescription">     
       <img
         src={process.env.PUBLIC_URL + '/assets/' + selectedImage.imageLink}
         alt="Imagem"
+        style={{ maxWidth: '500px', maxHeight: '500px' }}
       />
-      
+      <button className="backButton" onClick={onBackButtonClick}>
+        Voltar
+      </button>
     </div>
   );
 }

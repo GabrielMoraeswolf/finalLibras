@@ -53,11 +53,15 @@
   
   .card {
     flex: 1;
-    background-color: #f0f0f0; /* Substitua pela cor desejada */
+    background-color: #f0f0f0; 
     height: 125px;
     width: 220px;
     margin: 5px;
     border-radius: 10px;
+    transition: background-color 0.1s ease-in-out; 
+  }
+  .card:hover {
+    background-color: #a1a1a1; 
   }
   .backButton {
     margin-top: 10px;
@@ -67,4 +71,9 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+  }
+  .pageDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
