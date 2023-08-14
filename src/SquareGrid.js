@@ -31,8 +31,8 @@ function SquareGrid({ onImageClick }) {
 
   const renderGrid = () => {
     const grid = [];
-    for (let i = 0; i < listItems.length; i += 5) {
-      grid.push(renderRow(i, i + 5));
+    for (let i = 0; i < listItems.length; i += 4) {
+      grid.push(renderRow(i, i + 4));
     }
     return grid;
   };

@@ -14,7 +14,8 @@ function ImagePage({ selectedImageId, onBackButtonClick }) {
       <img
         src={process.env.PUBLIC_URL + '/assets/' + selectedImage.imageLink}
         alt="Imagem"
-        style={{ maxWidth: '500px', maxHeight: '500px' }}
+        style={{ maxWidth: '500px', maxHeight: '500px', //minHeight: '450px', minWidth: '450px'
+       }}
       />
       <button className="backButton" onClick={onBackButtonClick}>
         Voltar
