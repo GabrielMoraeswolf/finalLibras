@@ -41,7 +41,7 @@ function SquareGrid({ onImageClick }) {
     <div>
       <div>{renderGrid()}</div>
       <div className="textDescription">
-        <p>Click na palavra para ver o sinal em Libras correspondente.</p>
+        <p>Click na palavra/frase para ver o sinal em Libras correspondente.</p>
       </div>
     </div>
   );
