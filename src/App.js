@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <div className="container">
-        <h1 className="title">20 Palavras Fundamentais para as Geociências em Libras:</h1>
+        <h1 className="title"> Geociências em Libras:</h1>
         <div className="app">
           {selectedImageId === null ? (
             <SquareGrid onImageClick={handleImageClick} />          
