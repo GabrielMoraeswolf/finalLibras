@@ -15,7 +15,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div >
       <div className="container">
         <h1 className="title"> Geociências em Libras:</h1>
         <div className="app">

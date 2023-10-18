@@ -1,12 +1,12 @@
+
 .container{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(#4E4FEB,#A0BFE0);
-    height: 100dvh;
+    height: 100vh;
     width: 100%;
-  
 }
 .title{
     color: #fff;
@@ -63,8 +63,8 @@
     flex: 1;
     background-color: #f0f0f0; 
     height: 125px;
-    width: 240px;
-    margin: 5px;
+    width: 240px; 
+    margin: 5px ;
     border-radius: 10px;
     transition: background-color 0.1s ease-in-out; 
   }
@@ -84,4 +84,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media (max-width: 700px){
+    .container{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(#4E4FEB,#A0BFE0);
+      height: 100%;
+      width: 100%;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap; /* Permite que os cards mudem de linha */
+    }
+
+    .card {
+      flex: 1;
+      width: calc(50% - 20px); /* Duas colunas, com espaço entre elas */
+      margin: 5px 10px; /* Aumente o espaço entre os cards */
+    }
+    .textDescription{
+      color: black;
+      font-size: 16px;
+      justify-content: center;
+      display: flex;
+      flex-direction: center;
+      padding-left: 10px;
+      align-items: center;
+      font-weight: bold;
+    }
+    .pageDescription{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      height: 100vh;
+      width: 100%;
+      max-width: 400px;
+      max-height: 400px;
+
+    }
   }

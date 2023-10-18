@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
 import { dataArray } from './SquareGridData';
-
-function Card({ id, value, onImageClick }) {
-  return (
-    <div className="card" onClick={() => onImageClick(id)}>
-      <p className="containerCard">{value}</p>
-    </div>
-  );
-}
+import Card from './Card'; 
 
 function SquareGrid({ onImageClick }) {
   const [listItems] = useState(dataArray);
+  const [columns, setColumns] = useState(4); // Padrão: 4 colunas
+
+  useEffect(() => {
+    // Verifica a largura da tela e ajusta o número de colunas
+    if (window.innerWidth <= 700) {
+      setColumns(2); 
+    } else {
+      setColumns(4); // Mais de 700px de largura: 4 colunas
+    }
+  }, []);
 
   const renderRow = (startIndex, endIndex) => {
     const rowItems = listItems.slice(startIndex, endIndex);
-    return (    
+    return (
       <div className="row" key={startIndex}>
         {rowItems.map(item => (
           <Card
@@ -23,6 +26,7 @@ function SquareGrid({ onImageClick }) {
             id={item.id}
             value={item.value}
             onImageClick={onImageClick}
+            columns={columns}
           />
         ))}
       </div>
@@ -31,8 +35,8 @@ function SquareGrid({ onImageClick }) {
 
   const renderGrid = () => {
     const grid = [];
-    for (let i = 0; i < listItems.length; i += 4) {
-      grid.push(renderRow(i, i + 4));
+    for (let i = 0; i < listItems.length; i += columns) {
+      grid.push(renderRow(i, i + columns));
     }
     return grid;
   };
@@ -41,7 +45,7 @@ function SquareGrid({ onImageClick }) {
     <div>
       <div>{renderGrid()}</div>
       <div className="textDescription">
-        <p>Click na palavra/frase para ver o sinal em Libras correspondente.</p>
+        <p>Clique na palavra/frase para ver o sinal em Libras correspondente.</p>
       </div>
     </div>
   );
