@@ -29,7 +29,7 @@ function App() {
           )}
         </div>
       </div>
-      <footer>By: Gabriel Moraes</footer>
+      <footer className="footer">By: Gabriel Moraes</footer>
     </div>
   );
 }
